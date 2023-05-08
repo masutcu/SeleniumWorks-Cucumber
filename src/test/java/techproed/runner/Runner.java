@@ -17,5 +17,6 @@ senaryoyu çalıştırabiliriz.
     //        features ===> features'ların olduğu package yolunu ver(ContentRoot)
     //        glue ====> stepDefinition'ların olduğu package yolunu ver(Source Root)
     //        tags ====> çalıştırmak istediğin grubu yaz
+    //        dryRun  = true
        public class Runner {
 }
