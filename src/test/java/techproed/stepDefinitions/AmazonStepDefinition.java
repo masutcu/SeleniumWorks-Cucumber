@@ -19,7 +19,7 @@ public class AmazonStepDefinition {
     }
     @Given("kullanici_amazon_sayfasina_gider")
     public void kullanici_amazon_sayfasina_gider() {
-        Driver.getDriver().get(ConfigReader.getProperty("amazon_Url"));
+        Driver.getDriver().get(ConfigReader.getProperty("amazon_url"));
     }
 
     @And("arama_kutusunda_iphone_aratir")
