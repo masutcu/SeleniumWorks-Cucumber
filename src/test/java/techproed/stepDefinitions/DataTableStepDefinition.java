@@ -1,11 +1,15 @@
 package techproed.stepDefinitions;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import techproed.pages.AmazonPage;
 import techproed.pages.DataTablePage;
+import techproed.utilities.Driver;
+import techproed.utilities.ReusableMethods;
 
 public class DataTableStepDefinition {
 
@@ -45,6 +49,19 @@ public class DataTableStepDefinition {
         dataTablePage=new DataTablePage();
         Assert.assertTrue(dataTablePage.verify.getText().contains(firstname));
 
+
+    }
+    @And("kullanici_verilen_ürünleri_aratır")
+    public void kullanici_verilen_urunleri_aratır(DataTable data) {
+        AmazonPage amazonPage=new AmazonPage();
+        System.out.println(data.asList());
+        for (int i = 1; i <data.asList().size() ; i++) {
+           amazonPage.aramaKutusu.sendKeys(data.asList().get(i),Keys.ENTER);
+            ReusableMethods.bekle(1);
+            Assert.assertTrue(Driver.getDriver().getTitle().contains(data.asList().get(i)));
+            amazonPage.aramaKutusu.clear();
+
+        }
 
     }
 }

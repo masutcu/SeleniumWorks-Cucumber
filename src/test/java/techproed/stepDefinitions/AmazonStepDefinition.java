@@ -34,18 +34,6 @@ public class AmazonStepDefinition {
         amazonPage.aramaKutusu.sendKeys("selenium", Keys.ENTER);
     }
 
-    @And("arama_kutusunda_java_aratir")
-    public void arama_kutusunda_java_aratir() {
-        amazonPage = new AmazonPage();
-        amazonPage.aramaKutusu.sendKeys("java", Keys.ENTER);
-
-    }
-
-    @And("arama_kutusunda_sql_aratir")
-    public void arama_kutusunda_sql_aratir() {
-        amazonPage = new AmazonPage();
-        amazonPage.aramaKutusu.sendKeys("sql", Keys.ENTER);
-    }
 
     @Then("arama_kutusunda_{string}_aratir")
     public void arama_kutusunda__aratir(String arananMetin) {
@@ -57,5 +45,6 @@ public class AmazonStepDefinition {
     public void kullaniciSaniyeBekler(int saniye) {
         ReusableMethods.bekle(saniye);
     }
+
 
 }
