@@ -8,6 +8,8 @@ import techproed.pages.BlueRentalPage;
 import techproed.utilities.Driver;
 import techproed.utilities.ReusableMethods;
 
+import java.util.Map;
+
 public class BlueRentelStepDefinition {
 
     BlueRentalPage blueRentalPage=new BlueRentalPage();
@@ -26,6 +28,25 @@ public class BlueRentelStepDefinition {
         ReusableMethods.bekle(3);
         Assert.assertEquals(blueRentalPage.userDropDown.getText(),"Kate Brown");
 
+
+    }
+
+    @Then("Verilen_kullanicilar_ile_login_olur")
+    public void verilen_kullanicilar_ile_login_olur(DataTable data) {
+        System.out.println("data.asMaps() = " + data.asMaps());
+        //Maplerden oluşan bir list oluşturur.
+        // Feature file da oluşturulan tabloyu map olarak listeler.
+        // Başlığı Key olarak alır. Altındaki verileri value olarak alır.
+        for (Map<String,String> w:data.asMaps()){
+            blueRentalPage.loginButton.click();
+            blueRentalPage.emailBox.sendKeys(w.get("emailAdress"),Keys.TAB,w.get("password"),Keys.ENTER);
+            ReusableMethods.bekle(2);
+            blueRentalPage.userDropDown.click();
+            ReusableMethods.bekle(2);
+            blueRentalPage.logOut.click();
+            ReusableMethods.bekle(2);
+            blueRentalPage.OK.click();
+        }
 
     }
 }
