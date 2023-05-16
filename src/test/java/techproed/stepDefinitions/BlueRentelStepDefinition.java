@@ -2,6 +2,7 @@ package techproed.stepDefinitions;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
@@ -76,9 +77,12 @@ public class BlueRentelStepDefinition {
             blueRentalPage.OK.click();
 
 
-
-
-
         }
+    }
+
+
+    @Given("kullanici_blueRentACar_sayfasina_gider_exceldeki_verilerle_login_olur")
+    public void kullanici_bluerentacar_sayfasina_gider_exceldeki_verilerle_login_olur() {
+        System.out.println("kullanici_blueRentACar_sayfasina_gider_exceldeki_verilerle_login_olundu");
     }
 }

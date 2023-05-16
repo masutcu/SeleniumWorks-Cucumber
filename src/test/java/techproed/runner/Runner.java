@@ -13,11 +13,13 @@ senaryoyu çalıştırabiliriz.
     //seneryaların nerede ve nasıl çalışacağı, hangi raporu kullanacağı ile ilgili seçenekleri ayarlar
     @CucumberOptions(plugin = {"pretty","html:src/test/resources/features/htmlReport/cucumberHooks.html",//konsolda senaryolar ile ilgili bilgi yazdırılır
                                         "json:src/test/resources/features/htmlReport/cucumber.json",
-                                        "junit:src/test/resources/features/htmlReport/cucumber.xml"},
+                                        "junit:src/test/resources/features/htmlReport/cucumber.xml",
+                                        "rerun:TestOutput/filed_scenario.txt"},//testng deki listeners retry gibi fail olan senaryoları
+                                                                                //belirtilen yoldaki .txt  dosyada gösterir
 
                     features = "src/test/resources/features",
                     glue ={"techproed/stepDefinitions"},//Bu parametre ile kodlarımızı yazdığımız step definition class ının package ını belirtiriz.
-                    tags ="@hooks",
+                    tags ="@rerun",
                     dryRun = false,
                     monochrome = false)//pretty ifadesinden sonra monocrome true kullanırsak
                                         // senaryo adımları konsolda  siyah gösterilir. default "false" renkli

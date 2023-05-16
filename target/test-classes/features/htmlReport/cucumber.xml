@@ -1,3 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.061" tests="0" skipped="0" failures="0" errors="0">
+<testsuite name="Cucumber" time="26.09" tests="3" skipped="0" failures="3" errors="0">
+<testcase classname="US003 Amazon Testi" name="TC01 Amazonda_ürün_aratma" time="10.422">
+<failure/>
+<system-out><![CDATA[
+Given kullanici_"amazon_url"_sayfasina_gider................................passed
+And arama_kutusunda_iphone_aratir...........................................passed
+And basligin "Iphone" icerdigini dogrular  //fail verecek locate yanlış.....undefined
+]]></system-out>
+</testcase>
+<testcase classname="US003 Amazon Testi" name="TC03 Amazonda_ürün_aratma" time="7.623">
+<failure/>
+<system-out><![CDATA[
+Given kullanici_"amazon_url"_sayfasina_gider................................passed
+And arama_kutusunda_"nokia"_aratir..........................................passed
+And basligin "samsung" icerdigini dogrular  //fail  verecek.................undefined
+]]></system-out>
+</testcase>
+<testcase classname="US003 Amazon Testi" name="TC04 Amazonda_ürün_aratma" time="7.779">
+<failure/>
+<system-out><![CDATA[
+Given kullanici_"amazon_url"_sayfasina_gider................................passed
+And arama_kutusunda_"motorola"_aratir.......................................passed
+And basligin "samsung" icerdigini dogrular  //fail  verecek.................undefined
+]]></system-out>
+</testcase>
 </testsuite>
