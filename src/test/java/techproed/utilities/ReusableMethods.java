@@ -1,8 +1,6 @@
 package techproed.utilities;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,9 +17,7 @@ import java.util.List;
 
 public class ReusableMethods {
 
-        protected static ExtentReports extentReports;
-        protected static ExtentHtmlReporter extentHtmlReporter;
-        protected static ExtentTest extentTest;
+
 
 
         //HARD WAIT METHOD
@@ -144,20 +140,8 @@ public class ReusableMethods {
             }
         }
 
-        //ExtentReport
-        public static void extentReport() {
-            extentReports = new ExtentReports();
-            String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
-            String dosyaYolu = "TestOutput/reports/extentReport_" + tarih + ".html";
-            extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
-            extentReports.attachReporter(extentHtmlReporter);
 
-            //Raporda gözükmesini istediğimiz bilgiler için
-            extentReports.setSystemInfo("Browser", "Chrome");
-            extentReports.setSystemInfo("Tester", "Erol");
-            extentHtmlReporter.config().setDocumentTitle("Extent Report");
-            extentHtmlReporter.config().setReportName("Smoke Test Raporu");
-        }
+
 
         //WebTable
         public static void printData(int satir, int sutun) {

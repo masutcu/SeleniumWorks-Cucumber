@@ -1,4 +1,4 @@
-package techproed.runner;
+package techproed.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -12,16 +12,18 @@ senaryoyu çalıştırabiliriz.
     @RunWith(Cucumber.class)//Cucumber ile Junit in entegre olmasını sağlayan test çalıştırıcı notasyon
     //seneryaların nerede ve nasıl çalışacağı, hangi raporu kullanacağı ile ilgili seçenekleri ayarlar
     @CucumberOptions(plugin = {"pretty","html:src/test/resources/features/htmlReport/cucumberHooks.html",//konsolda senaryolar ile ilgili bilgi yazdırılır
-                                        "json:src/test/resources/features/htmlReport/cucumber.json",
+                                        "json:target/json-reports/cucumber.json",
                                         "junit:src/test/resources/features/htmlReport/cucumber.xml",
-                                        "rerun:TestOutput/filed_scenario.txt"},//testng deki listeners retry gibi fail olan senaryoları
+                                        "rerun:TestOutput/filed_scenario.txt"
+                                        },
+                                                                                //rerun testng deki listeners retry gibi fail olan senaryoları
                                                                                 //belirtilen yoldaki .txt  dosyada gösterir
 
                     features = "src/test/resources/features",
                     glue ={"techproed/stepDefinitions"},//Bu parametre ile kodlarımızı yazdığımız step definition class ının package ını belirtiriz.
-                    tags ="@rerun",
+                    tags ="@techpro1",
                     dryRun = false,
-                    monochrome = false)//pretty ifadesinden sonra monocrome true kullanırsak
+                    monochrome = true)//pretty ifadesinden sonra monocrome true kullanırsak
                                         // senaryo adımları konsolda  siyah gösterilir. default "false" renkli
     // dryRun default olarak false'dur.
     // true dersek testlerimizi gercekte calistirmaz

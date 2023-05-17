@@ -12,3 +12,10 @@ Bunlar selenium java,webdriver manager,cucumber java,cucumber junit.
     (proje seviyesinde bu dosyamızı oluştururuz.)
 6-.feature file lar için resources package ı altında features isminde bir package daha oluştururuz.
 7- features package ı üstüne gelip sağ tıklayıp new file ile bir feature uzantılı file oluşturalım.
+
+--Paralel Testing-----
+1-Paralel testing yapabilmek için öncelikle sure-fire plugin i pom.xml dosyamıza eklememiz gererkir.
+2-Aynı anda 2 farklı senaryo çalıştırabilmek için 1 tane daha runner class oluşturulur. ismi runner1 olabilir ama runner olmalı
+    (3 farklı senaryo çalıştırmak istersek 3 adet runner olmalıdır.)
+3- tags parametresine hangi senaryoları çalıştıracaksak onları belirttik
+4-Terminali açarak mvn clean verify yazarak aynı anda scenirio larımızı run ederiz..

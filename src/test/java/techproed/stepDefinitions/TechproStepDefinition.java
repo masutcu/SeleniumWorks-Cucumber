@@ -57,4 +57,6 @@ public class TechproStepDefinition {
     public void sayfa_basliginin__icerdigini_test_eder(String metin) {
         Assert.assertTrue(Driver.getDriver().getTitle().contains(metin));
     }
+
+
 }

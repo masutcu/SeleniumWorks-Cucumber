@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="29.721" tests="3" skipped="0" failures="3" errors="0">
-<testcase classname="US003 Amazon Testi" name="TC01 Amazonda_ürün_aratma" time="9.796">
-<failure/>
+<testsuite name="Cucumber" time="13.309" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US001_Parallel_Test" name="TC01_TechProEducation_Sayfasi_Testi" time="13.065">
 <system-out><![CDATA[
-Given kullanici_"amazon_url"_sayfasina_gider................................passed
-And arama_kutusunda_iphone_aratir...........................................passed
-And basligin "iphone" icerdigini dogrular  //fail verecek locate yanlış.....undefined
-]]></system-out>
-</testcase>
-<testcase classname="US003 Amazon Testi" name="TC03 Amazonda_ürün_aratma" time="8.119">
-<failure/>
-<system-out><![CDATA[
-Given kullanici_"amazon_url"_sayfasina_gider................................passed
-And arama_kutusunda_"nokia"_aratir..........................................passed
-And basligin "samsung" icerdigini dogrular  //fail  verecek.................undefined
-]]></system-out>
-</testcase>
-<testcase classname="US003 Amazon Testi" name="TC04 Amazonda_ürün_aratma" time="11.549">
-<failure/>
-<system-out><![CDATA[
-Given kullanici_"amazon_url"_sayfasina_gider................................passed
-And arama_kutusunda_"motorola"_aratir.......................................passed
-And basligin "samsung" icerdigini dogrular  //fail  verecek.................undefined
+Given kullanici_"techproed_Url"_sayfasina_gider.............................passed
+Then cikan_reklam_kapatilir.................................................passed
+When kullanici 2 saniye bekler..............................................passed
+And searchBoxda_"qa"_aratir.................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
