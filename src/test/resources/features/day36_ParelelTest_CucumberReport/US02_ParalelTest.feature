@@ -4,4 +4,4 @@ Feature: US002_Parallel_Test
     Given kullanici_"techproed_Url"_sayfasina_gider
     Then cikan_reklam_kapatilir
     When kullanici 2 saniye bekler
-    And searchBoxda_"python"_aratir
+    And searchBoxda_"Software"_aratir
