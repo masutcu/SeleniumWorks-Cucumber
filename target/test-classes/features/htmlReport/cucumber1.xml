@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="13.304" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="US001_Parallel_Test" name="TC02_TechProEducation_Sayfasi_Testi" time="13.063">
+<testsuite name="Cucumber" time="11.537" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US001_Parallel_Test" name="TC02_TechProEducation_Sayfasi_Testi" time="11.316">
 <system-out><![CDATA[
 Given kullanici_"techproed_Url"_sayfasina_gider.............................passed
 Then cikan_reklam_kapatilir.................................................passed

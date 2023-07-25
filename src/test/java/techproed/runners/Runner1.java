@@ -19,7 +19,7 @@ senaryoyu çalıştırabiliriz.
 
         features = "src/test/resources/features",
         glue ={"techproed/stepDefinitions"},//Bu parametre ile kodlarımızı yazdığımız step definition class ının package ını belirtiriz.
-        tags ="@techpro2",
+        tags ="@techpro1",
         dryRun = false,
         monochrome = true)
 

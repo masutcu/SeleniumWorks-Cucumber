@@ -3,6 +3,7 @@ package techproed.stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -32,6 +33,7 @@ public class AmazonStepDefinition {
     public void arama_kutusunda_selenium_aratir() {
         amazonPage = new AmazonPage();
         amazonPage.aramaKutusu.sendKeys("selenium", Keys.ENTER);
+        ReusableMethods.bekle(1);
     }
 
 
@@ -47,4 +49,17 @@ public class AmazonStepDefinition {
     }
 
 
+    @When("arama_kutusunda_Java_aratir")
+    public void arama_kutusunda_java_aratir() {
+       amazonPage = new AmazonPage();
+        amazonPage.aramaKutusu.sendKeys("java", Keys.ENTER);
+
+    }
+
+    @And("arama_kutusunda_sql_aratir")
+    public void arama_kutusunda_sql_aratir() {
+        amazonPage = new AmazonPage();
+        amazonPage.aramaKutusu.sendKeys("sql", Keys.ENTER);
+
+    }
 }
