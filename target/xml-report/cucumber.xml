@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="10.718" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US001_Amazon_Sayfası_Testi" name="TC01_Amazon_Sayfasında_Urun_Aratılır" time="10.53">
+<system-out><![CDATA[
+Given kullanici_amazon_sayfasina_gider......................................passed
+And arama_kutusunda_iphone_aratir...........................................passed
+And sayfayi_kapatir.........................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

@@ -11,15 +11,17 @@ senaryoyu çalıştırabiliriz.
 
 @RunWith(Cucumber.class)//Cucumber ile Junit in entegre olmasını sağlayan test çalıştırıcı notasyon
 //seneryaların nerede ve nasıl çalışacağı, hangi raporu kullanacağı ile ilgili seçenekleri ayarlar
-@CucumberOptions(plugin = {"pretty","html:src/test/resources/features/htmlReport/cucumberHooks.html",//konsolda senaryolar ile ilgili bilgi yazdırılır
-        "json:target/json-reports/cucumber1.json",
-        "junit:src/test/resources/features/htmlReport/cucumber1.xml",
-        "rerun:TestOutput/filed_scenario.txt"},//testng deki listeners retry gibi fail olan senaryoları
-        //belirtilen yoldaki .txt  dosyada gösterir
-
+@CucumberOptions(plugin = {
+        "pretty", // consolu renkli yazdirir
+        "html:target/default-cucumber-reports.html",
+        "json:target/json-reports/cucumber.json",
+        "junit:target/xml-report/cucumber.xml",
+        "rerun:target/failed_scenarios.txt",
+        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+},
         features = "src/test/resources/features",
         glue ={"techproed/stepDefinitions"},//Bu parametre ile kodlarımızı yazdığımız step definition class ının package ını belirtiriz.
-        tags ="@techpro1",
+        tags ="@ilk",
         dryRun = false,
         monochrome = true)
 

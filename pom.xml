@@ -39,13 +39,6 @@
             <version>7.11.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-        <!--dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>5.0.9</version>
-        </dependency>
-        -->
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
             <groupId>org.apache.poi</groupId>
@@ -58,14 +51,21 @@
             <artifactId>poi-ooxml</artifactId>
             <version>5.2.3</version>
         </dependency>
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>1.6.0</version>
+            </dependency>
+
         </dependencies>
+
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.0.0-M1</version>
                 <configuration>
                     <parallel>methods</parallel>
                     <threadCount>2</threadCount> <!--aynı anda 2 browser çalıştırılacağı anlamına gelir. -->
@@ -90,7 +90,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>cucumber-framework</projectName>
+                            <projectName>cucumber-jvm-example</projectName>
                             <outputDirectory>${project.build.directory}</outputDirectory>
                             <inputDirectory>${project.build.directory}</inputDirectory>
                             <jsonFiles>
@@ -103,6 +103,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 
