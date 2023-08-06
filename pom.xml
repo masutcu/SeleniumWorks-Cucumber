@@ -51,11 +51,13 @@
             <artifactId>poi-ooxml</artifactId>
             <version>5.2.3</version>
         </dependency>
+
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
-            <version>1.6.0</version>
+            <version>1.13.0</version>
             </dependency>
+
 
         </dependencies>
 
