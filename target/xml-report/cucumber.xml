@@ -1,42 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="4.829" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="US001_Amazon_Sayfası_Testi" name="TC01_Amazon_Sayfasında_Urun_Aratılır" time="4.629">
-<failure type="org.openqa.selenium.SessionNotCreatedException" message="Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 114
-Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
-Host info: host: 'MY-THINKBOOK', ip: '192.168.1.35'
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]">
-<![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 114
-Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
-Host info: host: 'MY-THINKBOOK', ip: '192.168.1.35'
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:165)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:73)
-	at techproed.utilities.Driver.getDriver(Driver.java:39)
-	at techproed.stepDefinitions.AmazonStepDefinition.kullanici_amazon_sayfasina_gider(AmazonStepDefinition.java:23)
-	at ✽.kullanici_amazon_sayfasina_gider(file:///C:/Users/Lenovo/IdeaProjects/B129_Cucumber/src/test/resources/features/day30_ilkFeature/ilkfeature.feature:4)
-]]>
-</failure>
+<testsuite name="Cucumber" time="8.8" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US001_Amazon_Sayfası_Testi" name="TC01_Amazon_Sayfasında_Urun_Aratılır" time="8.543">
 <system-out><![CDATA[
-Given kullanici_amazon_sayfasina_gider......................................failed
-And arama_kutusunda_iphone_aratir...........................................skipped
-And sayfayi_kapatir.........................................................skipped
+Given kullanici_amazon_sayfasina_gider......................................passed
+And arama_kutusunda_iphone_aratir...........................................passed
+And sayfayi_kapatir.........................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

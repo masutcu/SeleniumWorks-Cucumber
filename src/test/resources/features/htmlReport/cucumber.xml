@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="7.898" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="US001_Amazon_Sayfası_Testi" name="TC01_Amazon_Sayfasında_Urun_Aratılır" time="7.717">
+<testsuite name="Cucumber" time="41.966" tests="5" skipped="0" failures="3" errors="0">
+<testcase classname="US003 Amazon Testi" name="TC01 Amazonda_ürün_aratma" time="9.614">
+<failure/>
 <system-out><![CDATA[
-Given kullanici_amazon_sayfasina_gider......................................passed
+Given kullanici_"amazon_url"_sayfasina_gider................................passed
 And arama_kutusunda_iphone_aratir...........................................passed
-And sayfayi_kapatir.........................................................passed
+And basligin "iphone" icerdigini dogrular  #fail verecek locate yanlış......undefined
+]]></system-out>
+</testcase>
+<testcase classname="US003 Amazon Testi" name="TC02 Amazonda_ürün_aratma" time="9.858">
+<system-out><![CDATA[
+Given kullanici_"amazon_url"_sayfasina_gider................................passed
+And arama_kutusunda_"samsung"_aratir........................................passed
+And basligin "samsung" icerdigini dogrular..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US003 Amazon Testi" name="TC03 Amazonda_ürün_aratma" time="9.332">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at techproed.stepDefinitions.GoogleStepDefinition.basliginIcerdiginiDogrular(GoogleStepDefinition.java:23)
+	at ✽.basligin "samsung" icerdigini dogrular(file:///C:/Users/Lenovo/IdeaProjects/B129_Cucumber/src/test/resources/features/day35_Excel_Rerun/US03_Rerun.feature:17)
+]]>
+</failure>
+<system-out><![CDATA[
+Given kullanici_"amazon_url"_sayfasina_gider................................passed
+And arama_kutusunda_"nokia"_aratir..........................................passed
+And basligin "samsung" icerdigini dogrular..................................failed
+]]></system-out>
+</testcase>
+<testcase classname="US003 Amazon Testi" name="TC04 Amazonda_ürün_aratma" time="5.71">
+<failure/>
+<system-out><![CDATA[
+Given kullanici_"amazon_url"_sayfasina_gider................................passed
+And arama_kutusunda_"motorola"_aratir.......................................passed
+And basligin "samsung" icerdigini dogrular  #fail  verecek..................undefined
+]]></system-out>
+</testcase>
+<testcase classname="US003 Amazon Testi" name="TC05 Amazonda_ürün_aratma" time="7.047">
+<system-out><![CDATA[
+Given kullanici_"amazon_url"_sayfasina_gider................................passed
+And arama_kutusunda_"apple"_aratir..........................................passed
+And basligin "apple" icerdigini dogrular....................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

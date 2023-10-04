@@ -21,7 +21,7 @@ senaryoyu çalıştırabiliriz.
 
                     features = "src/test/resources/features",
                     glue ={"techproed/stepDefinitions"},//Bu parametre ile kodlarımızı yazdığımız step definition class ının package ını belirtiriz.
-                    tags ="@ilk",
+                    tags ="@rerun",
                     dryRun = false,
                     monochrome = true)//pretty ifadesinden sonra monocrome true kullanırsak
                                         // senaryo adımları konsolda  siyah gösterilir. default "false" renkli

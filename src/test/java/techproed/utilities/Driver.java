@@ -1,6 +1,6 @@
 package techproed.utilities;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -35,15 +35,16 @@ public class Driver {
         if (driver == null) {
             switch (ConfigReader.getProperty("browser")) {
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
+                   // WebDriverManager.chromedriver().setup();
+                    // selenium java 4.12 ile bonigacia webdrivermanager kalktı
                     driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
                     break;
                 case "edge":
-                    WebDriverManager.edgedriver().setup();
+
                     driver = new EdgeDriver(new EdgeOptions().addArguments("--remote-allow-origins=*"));
                     break;
                 default:
-                    WebDriverManager.chromedriver().setup();
+
                     driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
             }
 
